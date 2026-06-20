@@ -1,0 +1,59 @@
+/* src/styles/globals.css */
+/* ייבוא פונט המערכת האחיד מתוך Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+:root {
+  /* --- פלטת צבעים (Design Tokens) --- */
+  --color-primary: #FF7A45;      /* Warm Sunset Orange */
+  --color-secondary: #FFEC3D;    /* Pastel Sunny Yellow */
+  --color-accent: #69C0FF;       /* Friendly Sky Blue */
+  --color-background: #FAFAFA;   /* Soft Off-White */
+  --color-text-main: #262626;    /* Deep Charcoal */
+  --color-success: #52C41A;      /* Vibrant Green */
+  --color-error: #FF4D4F;        /* Soft Coral Red */
+  
+  /* --- גיאומטריה וריווח (Spacing & Geometry) --- */
+  --base-unit: 8px;
+  --radius-lg: 16px;             /* עבור כרטיסים, מודאלים וכפתורים ראשיים */
+  --radius-md: 8px;              /* עבור שדות קלט ואלמנטים פנימיים */
+  
+  /* --- הצללה עדינה לעומק ויזואלי --- */
+  --shadow-soft: 0px 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+/* איפוס הגדרות בסיסיות (Reset) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif; /* שימוש בפונט האחיד שקבעת */
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-main);
+  direction: rtl; /* התאמה מלאה לשפה העברית ולמשתמשים בישראל */
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* התנהגות גנרית לכפתורים על פי תבנית העיצוב */
+button {
+  cursor: pointer;
+  border: none;
+  font-family: 'Rubik', sans-serif;
+  border-radius: var(--radius-lg);
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* התנהגות גנרית לשדות קלט וצ'קבוקסים */
+input[type="checkbox"] {
+  accent-color: var(--color-accent); /* צבע סימון בהתאם לטוקן Accent */
+  cursor: pointer;
+}
