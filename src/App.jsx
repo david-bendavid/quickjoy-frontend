@@ -1,17 +1,29 @@
-// src/App.jsx
-import React, { useState } from 'react';
-import './styles/globals.css'; // טעינת משתני הסטייל והטוקנים הגלובליים של מערכת העיצוב
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import ResultsPage from './pages/ResultsPage';
 import ActivityDetailPage from './pages/ActivityDetailPage';
 
-export default function App() {
-  // ניהול עמוד נוכחי באמצעות State (מדמה החלפת עמודים מהירה ללא ספריות חיצוניות)
-  const [currentPage, setCurrentPage] = useState('home');
+function App() {
+  const [currentPage, setCurrentPage] = useState(() => {
+    const hash = window.location.hash.replace('#', '');
+    return hash || 'home';
+  });
 
-  // פונקציית עזר שמחליטה איזה מסך להציג למשתמש על המסך בהתאם למצב הנוכחי
+  useEffect(() => {
+    window.location.hash = currentPage;
+  }, [currentPage]);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace('#', '');
+      setCurrentPage(hash || 'home');
+    };
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
   const renderPage = () => {
     switch (currentPage) {
       case 'home':
@@ -26,29 +38,14 @@ export default function App() {
   };
 
   return (
-    <div style={styles.appContainer}>
-      {/* סרגל הניווט העליון המשותף לכל העמודים */}
+    <div className="app-container">
       <Navbar setCurrentPage={setCurrentPage} />
-      
-      {/* התוכן המשתנה דינמית בהתאם ללחיצות המשתמש */}
-      <main style={styles.mainContent}>
+      <main>
         {renderPage()}
       </main>
-      
-      {/* תחתית העמוד המשותפת לכל העמודים */}
       <Footer />
     </div>
   );
 }
 
-const styles = {
-  appContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    minHeight: '100vh' /* מבטיח שהאפליקציה תפרוס תמיד על כל גובה המסך */
-  },
-  mainContent: {
-    flex: 1, /* דוחף את הפוטר לתחתית בצורה נקייה */
-    paddingBottom: '40px'
-  }
-};
+export default App;
