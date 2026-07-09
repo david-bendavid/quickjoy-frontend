@@ -39,5 +39,5 @@ VITE_SUPABASE_ANON_KEY=your_key
 ## 📊 מודל הנתונים (ERD)
 הנה תרשים הישויות-קשרים של הפרויקט המציג את הטבלאות, העמודות והקשרים ביניהן:
 
-![ERD Diagram](./images/צילום ERD.png)
+![alt text](image-3.png)
 
