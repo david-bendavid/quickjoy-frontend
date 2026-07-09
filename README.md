@@ -1,16 +1,37 @@
-# React + Vite
+QuickJoy
+QuickJoy היא אפליקציה המאפשרת להורים למצוא פעילויות יצירה לילדים בזמן אמת, על בסיס חומרים שכבר קיימים בבית.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔗 קישור לפרויקט החי
+[https://quickjoy-frontend.vercel.app/#home]
 
-Currently, two official plugins are available:
+💡 סקירה כללית
+QuickJoy היא פלטפורמה חכמה המסננת פעילויות יצירה לילדים בהתאם לציוד הזמין בבית. המערכת חוסכת להורים זמן יקר בחיפוש רעיונות ומונעת מצבים שבהם מתחילים פעילות ומגלים שחסר חומר בסיסי.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🎯 הבעיה שהפרויקט פותר
+הורים רבים מתמודדים עם הקושי למצוא פעילות תעסוקה מיידית לילדים בבית. הניסיון למצוא רעיונות ברשת גוזל זמן, ולעיתים קרובות מוביל לתסכול כאשר מתברר שהציוד הנדרש לפעילות אינו זמין, מה שגורם לנטישת הפעילות עוד לפני שהחלה.
 
-## React Compiler
+👥 קהל היעד
+הורים לילדים בגילאי 3-6 שנמצאים בבית ומחפשים פתרון יצירתי, מהיר ונגיש להעסקת הילדים, ללא הכנות מוקדמות או קניות מיותרות.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+⚖️ מתחרים ובידול
+כיום, הורים משתמשים בכלים כמו Pinterest, חיפוש ידני בגוגל, או אפילו ניסיונות אלתור בראש. הבעיה בפתרונות אלו היא שהם לא "יודעים" מה יש לך בארון.
+הבידול שלנו: בעוד שמתחרים מציעים פעילויות לפי "מה שטרנדי", QuickJoy פועלת הפוך – אנחנו מתחילים מהמצאי הקיים בבית. המשתמש מסמן את החומרים שברשותו, והאפליקציה מציגה אך ורק את מה שניתן לבצע כאן ועכשיו.
 
-## Expanding the ESLint configuration
+📸 צילום מסך
+![alt text](image-1.png)
+![alt text](image-2.png)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🛠️ הוראות הרצה
+כדי להריץ את הפרויקט מקומית (לפיתוח):
+
+בצע Clone לריפו: git clone [https://github.com/david-bendavid/quickjoy-frontend]
+
+התקן ספריות: npm install
+
+צור קובץ .env והגדר בו את המפתחות של Supabase:(יש לקבל אותם מכותב הפרויקט)
+
+VITE_SUPABASE_URL=your_url
+
+VITE_SUPABASE_ANON_KEY=your_key
+
+הרץ: npm run dev
