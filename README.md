@@ -35,3 +35,9 @@ VITE_SUPABASE_URL=your_url
 VITE_SUPABASE_ANON_KEY=your_key
 
 הרץ: npm run dev
+
+## 📊 מודל הנתונים (ERD)
+הנה תרשים הישויות-קשרים של הפרויקט המציג את הטבלאות, העמודות והקשרים ביניהן:
+
+![ERD Diagram](./images/צילום ERD.png)
+
