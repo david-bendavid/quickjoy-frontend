@@ -57,3 +57,44 @@ input[type="checkbox"] {
   accent-color: var(--color-accent); /* צבע סימון בהתאם לטוקן Accent */
   cursor: pointer;
 }
+
+.activity-detail-container {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.activity-detail-container h1 {
+  color: #FF7A45;
+  margin-bottom: 10px;
+}
+
+.activity-detail-container h3 {
+  margin-top: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.activity-info-box {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.activity-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover; /* גורם לתמונה להיראות טוב גם אם הפרופורציות שונות */
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.activity-card-image {
+  width: 100%;
+  height: 150px; /* גובה קבוע שייראה אחיד */
+  object-fit: cover; /* מוודא שהתמונה ממלאת את הריבוע בלי להעוות את הפרופורציות */
+  border-radius: 8px 8px 0 0; /* פינות מעוגלות רק למעלה */
+  margin-bottom: 10px;
+}
